@@ -1,9 +1,5 @@
 ---
 - hosts: all
   roles:
-  - role: RedHatInsights.insights-client
-      vars:
-        insights_display_name: 'rhelhost1.mylab'
-        ansible_python_interpreter: '/usr/libexec/platform-python'
-    when: ansible_os_family == 'RedHat'
+  - { role: RedHatInsights.insights-client, when: ansible_os_family == 'RedHat' }
 
