@@ -1,5 +1,9 @@
 ---
-- hosts: all
-  roles:
-  - { role: RedHatInsights.insights-client, when: ansible_os_family == 'RedHat' }
+- name: Install RHEL Insight client
+  hosts: 192.168.122.41
+  tasks:
+  
+  - name: Install package
+    install:
+      name: RedHatInsights.insights-client
 
