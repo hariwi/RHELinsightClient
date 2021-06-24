@@ -1,9 +1,9 @@
 ---
 - name: Install RHEL Insight client
   hosts: 192.168.122.41
-  tasks:
+  roles:
   
   - name: Install package
-    install:
+    role:
       name: RedHatInsights.insights-client
 
