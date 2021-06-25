@@ -14,7 +14,7 @@
 # Identifier: (patch-advisory:RHBA-2019:3337,fix)
 # Version: 30f36af0250cb6293c57fb19c9337d88cc82d591
 - name: update packages
-  hosts: "host01.mylab"
+  hosts: 192.168.122.41
   vars:
     insights_issues: "RHBA-2019:3337"
     insights_signature_exclude: "/hosts,/vars/insights_signature,/vars/insights_issues"
