@@ -63,7 +63,7 @@
 # Automatic system reboot was suppressed for this playbook.
 # This play lists the systems that need to be rebooted manually for the changes to take effect.
 - name: Reboot reminder
-  hosts: "host01.mylab"
+  hosts: 192.168.122.41
   gather_facts: false
   vars:
     insights_signature_exclude: /hosts,/vars/insights_signature
@@ -96,7 +96,7 @@
         - insights_needs_reboot
 
 - name: run insights
-  hosts: "host01.mylab"
+  hosts: 192.168.122.41
   become: true
   gather_facts: false
   vars:
